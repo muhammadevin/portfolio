@@ -1,0 +1,50 @@
+.red__blur {
+    border-radius: 390.905px;
+    background: #FF4343;
+    filter: blur(160px);
+}
+
+.orange__blur {
+    border-radius: 390.905px;
+    background: #FF6D6D;
+    filter: blur(160px);
+}
+
+.lpink__blur {
+    border-radius: 390.905px;
+    background: #FFAFE9;
+    filter: blur(160px);
+}
+
+.pink__blur {
+    border-radius: 390.905px;
+    background: #FF87DD;
+    filter: blur(160px);
+}
+
+.grain__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-size: cover;
+    opacity: 0.1;
+  }
+
+.grain-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+    pointer-events: none;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+  
+  
