@@ -47,4 +47,39 @@
     background-position: center;
 }
   
+.color__bg {
+    height: 100vh;
+    filter: contrast(100%) brightness(100%);
+    background: 
+      linear-gradient(12deg, rgba(34,0,72,1), rgba(0,0,0,0)),
+      radial-gradient(
+        at 90% 10%,
+        rgba(255, 55, 55, 0.5), rgba(0,0,0,0.5)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 270 270' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.21' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   
+}
+  
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 196px;
+    border: 2.5px solid #FFF;
+}
+
+.rect__outline {
+    width: 320px;
+    height: 94px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+}
+
+.drop__shadow {
+    border-radius: 19px;
+    background: #0A021B;
+    box-shadow: 0px 10px 23px 0px rgba(0, 0, 0, 0.50);
+}

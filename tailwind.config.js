@@ -14,8 +14,8 @@ module.exports = {
         'grain': "url('/public/grain.svg')"
       },
       colors: {
-        primary: '#0D031B',
-        background: '#08001F'
+        primary: '#645F81',
+        secondary: '#0D031B'
       },
     },
   },
