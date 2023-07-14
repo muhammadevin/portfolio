@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['var(--font-inter)']
+        sans: ['var(--font-firstplace)'],
+        mono: ['var(--font-sf)'],
+        serif: ['var(--font-lowres)'],
       },
       backgroundImage: {
         'grain': "url('/public/grain.svg')"
