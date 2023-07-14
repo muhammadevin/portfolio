@@ -1,16 +1,13 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-inter',
- })
+import { sanfrans, firstplace, lowres } from './font'
+import Head from './head'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head />
+      <body className={`${firstplace.variable} font-sans ${sanfrans.variable} 
+      font-mono ${lowres.variable} font-serif`}>{children}</body>
     </html>
   )
 }
