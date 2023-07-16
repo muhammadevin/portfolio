@@ -1,46 +1,34 @@
+'use client'
+
 import Image from 'next/image'
 import './index.css'
+import { useState, useEffect } from 'react';
+import supabase from '@/utils/supabase'
+import { LogoDVN, Image1, Image2, Image3, Image4 } from '@/public'
+import { Navbar, ExpCard, LinksTab, TechStack, ExpDetail } from '@/components'
 
-import { LogoDVN, Image1, Image2, Image3, Image4,
-  ExpBinit, ExpParakno, ExpKoja } from '@/public'
-
-import { ExpCard, LinksTab, TechStack } from '@/components'
+export const revalidate = 5
 
 export default function Home() {
-  const experience = [
-    {
-      id: 1,
-      title: 'Dapur Koja Website',
-      role: 'Full-stack Developer',
-      image: ExpKoja,
-      link: 'https://dapurkoja-website.vercel.app/',
-    },
-    {
-      id: 2,
-      title: 'BinIT',
-      role: 'Machine Learning Developer',
-      image: ExpBinit,
-      link: 'https://github.com/muhammadevin/ML-C23-PS175',
-    },
-    {
-      id: 3,
-      title: 'Parakno Farm',
-      role: 'Full-stack Developer',
-      image: ExpParakno,
-      link: 'https://parakno-syahdanputra-uiacid.vercel.app/',
-    },
-  ]
+  const [selectedItemId, setSelectedItemId] = useState(null)
+  const [experience, setExperience] = useState([]);
+
+  const handleModal = (itemId) => {
+    setSelectedItemId(itemId);
+  };
+
+  useEffect(() => {
+    const fetchExperience = async () => {
+      const { data } = await supabase.from('experience').select();
+      setExperience(data);
+    };
+
+    fetchExperience();
+  }, []);
 
   return (
     <main className="w-full h-[100vh]">
-      <div className='flex w-full max-h-36 p-4 justify-start items-center gap-4'>
-        <Image src={LogoDVN} alt="logo" className='w-auto h-10 md:h-20 rounded-full border border-white'></Image>
-        <div className='hidden md:flex flex-row gap-1 text-white text-xl md:text-3xl'>
-          <span className='font-serif'>Hi</span>
-          <span className='font-sans'>WELCOME</span>
-          <span className='font-serif'>to Devin's portfolio.</span>
-        </div>
-      </div>
+      <Navbar />
 
       <div className='flex flex-row w-full min-h-[400px] max-h-[500px] gap-2 mt-2 relative'>
         <div className='w-2/5 float-left relative'>
@@ -62,7 +50,7 @@ export default function Home() {
       <div className='flex pb-3 md:py-4 px-4 font-mono mb-0 md:mb-24 justify-center items-center'>
         <div className="flex flex-col w-4/5 md:w-3/5 justify-center items-center text-center gap-4 text-sm md:text-base">
           <p>
-            Currently taking my bachelors degree in Computer Science at University of Indonesia. Deep passion for software engineering, focusing on front-end development. (Also) Just developed interest in data science and machine learning.
+            Currently taking my bachelors degree in Computer Science at University of Indonesia. Deep passion for software engineering, focusing on front-end development. (Also) Interest in data science and machine learning.
           </p>
           <LinksTab />
         </div>
@@ -107,8 +95,11 @@ export default function Home() {
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-1 justify-items-center md:gap-6 w-full px-8 sm:px-0'>
             {experience.map((item) => (
-              <div className='flex justify-center items-center h-fit'>
-                <ExpCard title={item.title} role={item.role} image={item.image} link={item.link}/>
+              <div className='flex justify-center items-center h-fit' key={item.id}>
+                <ExpCard experience={item} handleModal={() => handleModal(item.id)}/>
+                {selectedItemId === item.id ? (
+                  <ExpDetail key={item.id} experience={item} handleModal={() => handleModal(null)} />
+                ) : null}
               </div>
             ))}
           </div>
