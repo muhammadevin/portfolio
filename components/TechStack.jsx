@@ -10,8 +10,8 @@ const TechStack = () => {
     overflow-hidden select-none max-w-sm'>
       <div className='flex flex-row items-center py-2 px-4 gap-2 sm:gap-4
       flex-shrink-0 justify-around whitespace-no-wrap w-full'>
-        {textack.map((item) => (
-          <div className='imggro'>
+        {textack.map((item, index) => (
+          <div className='imggro' key={index}>
             <Image src={item} className="w-auto h-4 sm:h-5 lg:h-8" />
           </div>
         ))}
