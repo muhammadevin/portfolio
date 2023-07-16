@@ -12,7 +12,7 @@ const TechStack = () => {
       flex-shrink-0 justify-around whitespace-no-wrap w-full'>
         {textack.map((item, index) => (
           <div className='imggro' key={index}>
-            <Image src={item} className="w-auto h-4 sm:h-5 lg:h-8" />
+            <Image alt='techstack-img' src={item} className="w-auto h-4 sm:h-5 lg:h-8" />
           </div>
         ))}
       </div>

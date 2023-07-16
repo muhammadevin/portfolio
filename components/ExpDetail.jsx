@@ -28,11 +28,10 @@ const ExpDetail = ({experience, handleModal}) => {
         inset-0 z-50 outline-none focus:outline-none font-mono left-0 top-0 h-full w-full"
       >
         <div className="relative w-auto my-6 mx-auto max-w-[80%] md:max-w-[60%] max-h-96" ref={modalRef}>
-          {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex w-full bg-white outline-none focus:outline-none max-h-[375px] overflow-auto md:overflow-hidden">
             <div className="flex flex-col md:flex-row items-start justify-between p-5 rounded-t text-black gap-4">
               <div className='flex flex-col gap-1 items-start justify-center w-full md:w-1/2 float-left'>
-                <Image width="400" height='400' src={experience.image} className="max-w-full object-cover rounded-lg mb-2"></Image>
+                <Image alt='exp-image' width="400" height='400' src={experience.image} className="max-w-full object-cover rounded-lg mb-2"></Image>
                 <div className='flex flex-row gap-2 items-center w-full justify-start'>
                   <h3 className="text-left text-base md:text-xl font-semibold flex-grow-1">{experience.title}</h3>
                   <Link href={experience.link}>

@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className='hidden md:flex flex-row gap-1 text-white text-xl md:text-3xl'>
         <span className='font-serif'>Hi</span>
         <span className='font-sans'>WELCOME</span>
-        <span className='font-serif'>to Devin's portfolio.</span>
+        <span className='font-serif'>to Devin&apos;s portfolio.</span>
       </div>
     </div>
   )

@@ -37,14 +37,14 @@ export default function Home() {
         <div className='w-3/5 float-right relative'>
           <p className='absolute right-1 top-1 font-serif text-xs md:text-base'>muhammadevin</p>
           <p className='absolute right-1 bottom-1 font-serif text-xs md:text-base'>Yogyakarta 2023</p>
-          <Image src={Image1} className="h-full object-cover"></Image>
+          <Image src={Image1} className="h-full object-cover" alt='img1'></Image>
         </div>
       </div>
 
       <div className='flex md:hidden flex-row gap-1 text-white text-2xl md:text-3xl justify-center items-center p-4'>
         <span className='font-serif'>Hi</span>
         <span className='font-sans'>WELCOME</span>
-        <span className='font-serif'>to Devin's portfolio.</span>
+        <span className='font-serif'>to Devin&apos;s portfolio.</span>
       </div>
 
       <div className='flex pb-3 md:py-4 px-4 font-mono mb-0 md:mb-24 justify-center items-center'>
@@ -71,8 +71,8 @@ export default function Home() {
 
       <div className='flex flex-col gap-4 py-4 px-6 justify-center items-center font-mono leading-6 text-sm'>
         <div className='w-full md:w-3/5 flex flex-col gap-4'>
-          <p className='bg-black text-white gap-2 text-justify'>I find great satisfaction in bringing visual-pleasing ideas to life through my work, ensuring that user experiences are both seamless and visually appealing. Several projects I've worked with involves me leading the front-end development from the designing process up until the development.</p>
-          <p className='bg-black text-white gap-2 text-justify'>Furthermore, interacting with data through the realm of data science and machine learning has been my current joy. I'm currently participating as a Machine Learning cohort in Bangkit 2023 where I got to learn how to develop cool machine learning models that could solve real world problems.</p>
+          <p className='bg-black text-white gap-2 text-justify'>I find great satisfaction in bringing visual-pleasing ideas to life through my work, ensuring that user experiences are both seamless and visually appealing. Several projects I&apos;ve worked with involves me leading the front-end development from the designing process up until the development.</p>
+          <p className='bg-black text-white gap-2 text-justify'>Furthermore, interacting with data through the realm of data science and machine learning has been my current joy. I&apos;m currently participating as a Machine Learning cohort in Bangkit 2023 where I got to learn how to develop cool machine learning models that could solve real world problems.</p>
           <p className='bg-black text-white gap-2 text-justify'>My hobbies revolves around arts such music and photography. Both reflects the idea of fulfilling my senses in the best possible way. I play in a band every once in a while, but writing (unfinished) music has always been my go-to activity during free time.</p>
         </div>
       </div>
