@@ -29,7 +29,7 @@ export const lowres = localFont({
         weight: '400',
       },
       {
-        path: '../public/SFNSDisplay-SemiBold.otf',
+        path: '../public/SFNSDisplay-Semibold.otf',
         weight: '600',
       },
       {
