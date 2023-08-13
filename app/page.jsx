@@ -72,8 +72,8 @@ export default function Home() {
       <div className='flex flex-col gap-4 py-4 px-6 justify-center items-center font-mono leading-6 text-sm'>
         <div className='w-full md:w-3/5 flex flex-col gap-4'>
           <p className='bg-black text-white gap-2 text-justify'>I find great satisfaction in bringing visual-pleasing ideas to life through my work, ensuring that user experiences are both seamless and visually appealing. Several projects I&apos;ve worked with involves me leading the front-end development from the designing process up until the development.</p>
-          <p className='bg-black text-white gap-2 text-justify'>Furthermore, interacting with data through the realm of data science and machine learning has been my current joy. I&apos;m currently participating as a Machine Learning cohort in Bangkit 2023 where I got to learn how to develop cool machine learning models that could solve real world problems.</p>
-          <p className='bg-black text-white gap-2 text-justify'>My hobbies revolves around arts such music and photography. Both reflects the idea of fulfilling my senses in the best possible way. I play in a band every once in a while, but writing (unfinished) music has always been my go-to activity during free time.</p>
+          <p className='bg-black text-white gap-2 text-justify'>Furthermore, interacting with data through the realm of data science and machine learning has been my current joy. I recently completed the Machine Learning path program at Bangkit Academy 2023 where I got to learn many things about data and how to develop machine learning models that could solve real world problems.</p>
+          <p className='bg-black text-white gap-2 text-justify'>My hobbies revolve around arts such music and photography. Both reflect the idea of fulfilling my senses in the best possible way. I&apos;ve been taking photos on film since 2018, and around the same time, I started occasionally playing in a band—both of which I still enjoy today. Anyways, hit me up for collaborations!</p>
         </div>
       </div>
 
