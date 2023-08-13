@@ -50,7 +50,7 @@ export default function Home() {
       <div className='flex pb-3 md:py-4 px-4 font-mono mb-0 md:mb-24 justify-center items-center'>
         <div className="flex flex-col w-4/5 md:w-3/5 justify-center items-center text-center gap-4 text-sm md:text-base">
           <p>
-            Currently taking my bachelors degree in Computer Science at University of Indonesia. Deep passion for software engineering, focusing on front-end development. (Also) Interest in data science and machine learning.
+            I&apos;m Devin, a final year undergraduate Computer Science student at University of Indonesia. Deep passion for software engineering, focusing on front-end development, along with a keen interest in data science and machine learning.
           </p>
           <LinksTab />
         </div>
@@ -71,9 +71,9 @@ export default function Home() {
 
       <div className='flex flex-col gap-4 py-4 px-6 justify-center items-center font-mono leading-6 text-sm'>
         <div className='w-full md:w-3/5 flex flex-col gap-4'>
-          <p className='bg-black text-white gap-2 text-justify'>I find great satisfaction in bringing visual-pleasing ideas to life through my work, ensuring that user experiences are both seamless and visually appealing. Several projects I&apos;ve worked with involves me leading the front-end development from the designing process up until the development.</p>
-          <p className='bg-black text-white gap-2 text-justify'>Furthermore, interacting with data through the realm of data science and machine learning has been my current joy. I recently completed the Machine Learning path program at Bangkit Academy 2023 where I got to learn many things about data and how to develop machine learning models that could solve real world problems.</p>
-          <p className='bg-black text-white gap-2 text-justify'>My hobbies revolve around arts such music and photography. Both reflect the idea of fulfilling my senses in the best possible way. I&apos;ve been taking photos on film since 2018, and around the same time, I started occasionally playing in a band—both of which I still enjoy today. Anyways, hit me up for collaborations!</p>
+          <p className='bg-black text-white gap-2 text-justify'>I find great satisfaction in bringing visual-pleasing ideas to life through my work, ensuring that user experiences are both seamless and visually appealing. Several projects I&apos;ve worked with involves me leading the front-end development from the designing process up until the code development.</p>
+          <p className='bg-black text-white gap-2 text-justify'>Furthermore, interacting with data through the realm of data science and machine learning has been my current joy. I recently completed the Machine Learning path program at Bangkit Academy 2023 where I got to learn many things about data science (also including data analytics) and how to develop machine learning models that could solve real world problems.</p>
+          <p className='bg-black text-white gap-2 text-justify'>My hobbies revolve around arts such music and photography. Both reflect the idea of fulfilling my senses in the best possible way. I&apos;ve been taking photos on film since 2018, and around the same time, I started playing in a band every once in a while—both of which I still enjoy today.</p>
         </div>
       </div>
 
