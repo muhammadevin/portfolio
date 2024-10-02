@@ -1,30 +1,13 @@
-'use client'
-
 import Image from 'next/image'
 import './index.css'
-import { useState, useEffect } from 'react';
 import supabase from '@/utils/supabase'
 import { LogoDVN, Image1, Image2, Image3, Image4 } from '@/public'
-import { Navbar, ExpCard, LinksTab, TechStack, ExpDetail } from '@/components'
+import { Navbar, LinksTab, TechStack, Experience } from '@/components'
 
 export const revalidate = 5
 
-export default function Home() {
-  const [selectedItemId, setSelectedItemId] = useState(null)
-  const [experience, setExperience] = useState([]);
-
-  const handleModal = (itemId) => {
-    setSelectedItemId(itemId);
-  };
-
-  useEffect(() => {
-    const fetchExperience = async () => {
-      const { data } = await supabase.from('experience').select();
-      setExperience(data);
-    };
-
-    fetchExperience();
-  }, []);
+const Home = async () => {
+  const { data: experience } = await supabase.from('experience').select();
 
   return (
     <main className="w-full h-[100vh]">
@@ -89,21 +72,7 @@ export default function Home() {
       </div>
 
       <div className='flex items-center justify-center py-10 px-6 w-full'>
-        <div className='flex flex-col w-full md:w-3/5 items-center justify-center text-center gap-6'>
-          <div className='flex items-center justify-center p-3 rounded-lg'>
-            <h4 className='text-3xl font-sans'>my WORKS</h4>
-          </div>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-3 gap-x-1 justify-items-center md:gap-6 w-full px-8 sm:px-0'>
-            {experience.map((item) => (
-              <div className='flex justify-center items-center h-fit' key={item.id}>
-                <ExpCard experience={item} handleModal={() => handleModal(item.id)}/>
-                {selectedItemId === item.id ? (
-                  <ExpDetail key={item.id} experience={item} handleModal={() => handleModal(null)} />
-                ) : null}
-              </div>
-            ))}
-          </div>
-        </div>
+        <Experience experience={experience} />
       </div>
 
       <h4 className='text-sm text-white items-center text-center justify-center py-6 font-serif'>
@@ -112,3 +81,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
