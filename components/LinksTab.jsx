@@ -12,7 +12,7 @@ const LinksTab = () => {
       <Link href="https://www.linkedin.com/in/muhammadevin/"><BsLinkedin className="text-lg md:text-2xl"/></Link>
       <Link href="mailto:mdevinp@gmail.com"><FiMail className="text-xl md:text-3xl "/></Link>
       <Link href="https://www.instagram.com/devinpra/"><BsInstagram className="text-lg md:text-2xl "/></Link>
-      <Link href="https://drive.google.com/file/d/1rE7buoTmC8TAdi_VgIYXsXgbncARR-_O/view?usp=sharing"><CgFileDocument className="text-xl md:text-3xl"/></Link>
+      <Link href="https://www.ristek.link/CV_MDP"><CgFileDocument className="text-xl md:text-3xl"/></Link>
     </div>
   )
 }
